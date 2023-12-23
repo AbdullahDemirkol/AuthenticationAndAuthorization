@@ -1,0 +1,40 @@
+﻿@model ErrorViewModel
+@{
+    ViewData["Title"] = "Not Found";
+}
+
+<div class="error-container">
+    <p class="error-code">404</p>
+    <p class="error-message">Not Found</p>
+    <p><a href="/" class="back-home">Back to Home</a></p>
+</div>
+@section Styles{
+    <style>
+        .error-container {
+            margin: 15rem 0;
+            text-align: center;
+        }
+
+        .error-code {
+            font-size: 120px;
+            font-weight: bold;
+            color: #333;
+            margin: 45px;
+        }
+
+        .error-message {
+            font-size: 24px;
+            color: #555;
+            margin: 10px 0;
+        }
+        p {
+            font-size: 15px;
+            font-family: "Nunito Sans", sans-serif;
+            color: #3d3d3d;
+            font-weight: 400;
+            line-height: 25px;
+            margin: 0 0 15px 0;
+        }
+    </style>
+
+}

@@ -1,0 +1,18 @@
+﻿
+@if (User.Identity.IsAuthenticated)
+{
+    <form method="post" class="form-inline" action="/Account/Logout">
+        <div class="row">
+            <div class="col-md-8 d-flex justify-content-end">
+                <p class="m-lg-2">Welcome, @User.Identity.Name!</p>
+            </div>
+            <div class="col-md-4 d-flex justify-content-start">
+                <button type="submit" class="btn btn-link">Logout</button>
+            </div>
+        </div>
+    </form>
+}
+else
+{
+    <a class="btn btn-link" href="/Account/Login">Login</a>
+}

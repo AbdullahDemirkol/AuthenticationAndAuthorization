@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Login Page";
+}
+@model LoginRequestModel
+<div class="container border" style="padding:20px;">
+    <form method="post">
+        <div class="form-group row justify-content-center" style="padding:10px;">
+            <div class="col-3">
+                <label asp-for="Username" class="form-control text-center"></label>
+            </div>
+            <div class="col-5">
+                <input type="text" asp-for="Username" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group row justify-content-center" style="padding:10px;">
+            <div class="col-3">
+                <label asp-for="Password" class="form-control text-center"></label>
+            </div>
+            <div class="col-5">
+                <input type="password" asp-for="Password" class="form-control" />
+            </div>
+        </div>
+        <div class="row form-group mb-2 justify-content-center">
+            <div class="col-2 text-center">
+                <input type="checkbox" asp-for="RememberMe" class="form-check-input"/>
+                <label class="form check-label" asp-for="RememberMe" >Remember Me</label>
+            </div>
+        </div>
+        <div class="submit-login-button text-center">
+            <input type="submit" class="btn btn-success" value="Giriş Yap" />
+            @if (ViewBag.ErrorMessage is not null)
+            {
+                <p class="error-message m-lg-2">@ViewBag.ErrorMessage</p>
+            }
+        </div>
+    </form>
+
+</div>
+
+@section Styles{
+    <style>
+        .error-message{
+            color: red;
+        }
+    </style>
+}
